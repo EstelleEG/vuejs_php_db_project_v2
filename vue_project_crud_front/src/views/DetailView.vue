@@ -37,7 +37,7 @@ export default {
 		const { bookId } = this.$route.params
 		console.log(bookId)
 		const apiDetailsUri = 'http://picwebloire.fr/estelle/back/api/single_read.php/?id=' + bookId
-		const oneBook = await axios.get(apiDetailsUri)
+		const oneBook = await axios.get(apiDetailsUri) //wait for the server to send me back the book
 		this.book = oneBook.data
 		console.log(this.book)
 
